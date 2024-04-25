@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTrive'24</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        /* Styling for the video background */
+        #bgVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            filter: brightness(50%);
+        }
+
+        #bgVideo video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .event {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .event.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .event h2 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .event p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .event img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: opacity 0.5s ease;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .event .register-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .event .register-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .expanded-description {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .expanded-description p {
+            margin-bottom: 10px;
+        }
+
+        .expanded-description.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .event:hover {
+            transform: translateY(0);
+        }
+
+        .event:hover img {
+            opacity: 1;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #333;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Video background -->
+    <div id="bgVideo">
+        <video autoplay muted loop>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <div class="header">
+        <h1>TechTrive'24</h1>
+        <p>CLARENTZ ASSOCIATION</p>
+    </div>
+    <div class="container">
+        <!-- Your event content -->
+        <div class="event">
+            <h2>Codejam</h2>
+            <img src="coding.jpg" alt="Coding Challenge">
+            <p class="description">Join our coding competition and showcase your programming skills. <a href="#" class="read-more">Read more</a></p>
+            <div class="expanded-description">
+                <h4>Round 1:</h4>
+            <ul>
+                <li>Format: Multiple Choice Questions (MCQs) and Debugging</li>
+                <li>Description: In this round, participants will face a series of MCQs testing their conceptual understanding of programming languages, algorithms, and data structures. Additionally, there will be debugging challenges where participants need to identify and fix errors in provided code snippets.</li>
+                <li>Selection Criteria: The highest scoring teams will proceed to the next round based on their performance in this round.</li>
+                <h4>Round 2:</h4>
+                <li>Format: Coding Challenges on HackerRank</li>
+                <li>Description: The second round will consist of three coding challenges hosted on HackerRank platform. Participants must solve these challenges within the given time limit and pass all the test cases to qualify for consideration.</li>
+                <li>Prerequisite: Participants are required to create a HackerRank ID before the event to participate in this round.</li>
+                <li>Selection Criteria: The top three teams that successfully pass all the test cases within the stipulated time limit will be declared the winners of CODEJAM.</li>
+                <h3>Additional Information:</h3>
+                <li>Participants must adhere to the event rules and guidelines provided by the organizers.</li>
+                <li>Fair play and integrity are expected from all participants throughout the competition.</li>
+                <li>Organizers reserve the right to disqualify any team found violating the rules or engaging in any form of misconduct.</li>
+                <li>All decisions made by the organizing committee regarding the event and its outcomes are final.</li>
+                <h3>Date: 26.04.24 | Time: 9.30 am</h3>
+                <h3>Venue: C303</h3>
+                <h3>Student Coordinators:</h3>
+                <p>Sathyasri.S - 9025504556</p>
+                <p>Gugapriya.A - 6374248015</p>
+            </ul>
+
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRCF6KmMiq7NbK07aqDes9g6t7B2KmVuorodXev4pktEGFsw/viewform?usp=sf_link" class="register-btn">Register</a>
+        </div>
+        <div class="event">
+            <h2>Machine Learning model creation</h2>
+            <img src="machine-learning.jpg" alt="Machine Learning model">
+            <p class="description">Learn about the latest trends in machine learning models. <a href="#" class="read-more">Read more</a></p>
+            <div class="expanded-description">
+
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSckXHj6loaNE7xj-KwKv-8HScSLBUJCsBPSIEteIFR5_-oWTg/viewform?pli=1" class="register-btn">Register</a>
+        </div>
+        <div class="event">
+            <h2>Cybersecurity Symposium</h2>
+            <img src="cybersecurity.jpg" alt="Cybersecurity Symposium">
+            <p class="description">Explore the world of cybersecurity and network security. <a href="#" class="read-more">Read more</a></p>
+            <div class="expanded-description">
+    
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdg8yJpZz5KxwvJ42ngl3ZMJ3UV8cPqFk470iZChlP_btlQ_Q/viewform?usp=sf_link" class="register-btn">Register</a>
+        </div>
+        <div class="event">
+            <h2>INNOVATIVE SHOWCASE(Project Expo)</h2>
+            <img src="project-expo.jpg" alt="Project Expo">
+            <p class="description">Showcase your innovative projects and get feedback from experienced professionals. <a href="#" class="read-more">Read more</a></p>
+            <div class="expanded-description">
+                <p>This event is the ultimate stage for students to showcase their out-of-the-box ideas through cool working models, prototypes, and more!!</p>
+                <h3>Guidelines/Rules & Regulations</h3>
+                <ul>
+                    <li>Open to all domains and can be hardware or software.</li>
+                    <li>Team Size: 1 - 3 members</li>
+                    <li>The working model is compulsory along with a presentation.</li>
+                    <li>Presentation time: max 7 minutes</li>
+                    <li>Q&A session: 3-5 min</li>
+                    <li>Mail your PPT to clarentzmcet@gmail.com before 24/4/2024</li>
+                    <li>Based on the idea, the teams will be shortlisted for presentation.</li>
+                </ul>
+                <h3>Date: 26.04.24 | Time: 9.30 am</h3>
+                <h3>Venue: C303</h3>
+                <h3>Student Coordinators:</h3>
+                <p>Krishika.R - 9385726369</p>
+                <p>Mohammed Yunus.S - 9677774097</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfrqYNgGx4_VA9d1yM8qAJI_s38IvtWtcnuiulXuJ4aoB9X2g/viewform?usp=sf_link" class="register-btn">Register</a>
+        </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/clarentz_mcet?igsh=czl6aXZqYmRla2g=" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var readMoreLinks = document.querySelectorAll('.read-more');
+
+            readMoreLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var expandedDesc = this.parentNode.nextElementSibling;
+                    expandedDesc.classList.toggle('show');
+                    this.textContent = expandedDesc.classList.contains('show') ? 'Read less' : 'Read more';
+                });
+            });
+
+            document.addEventListener('scroll', function() {
+                var events = document.querySelectorAll('.event');
+                events.forEach(function(event) {
+                    var eventTop = event.getBoundingClientRect().top;
+                    var windowHeight = window.innerHeight;
+                    if (eventTop < windowHeight * 0.8) {
+                        event.classList.add('show');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/abc123abc123.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
